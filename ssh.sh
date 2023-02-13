@@ -14,7 +14,7 @@ USAGE() {
 SSH Key Installer $VERSION
 
 Usage:
-  bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/master/ssh.sh) [options...] <arg>
+  bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/main/ssh.sh) [options...] <arg>
 
 Options:
   -o	覆盖模式，必须写在最前面才会生效
