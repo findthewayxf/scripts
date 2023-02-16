@@ -10,3 +10,11 @@ bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/master/ssh.sh) 
 bash <(curl -fsSL url.harlon.workers.dev/Th4ffm) -og findthewayxf -p 22122 -d
 ```
 
+
+
+## 内核清理
+
+```bash
+bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/master/ckernel.sh) 
+```
+
