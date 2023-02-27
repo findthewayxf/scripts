@@ -32,7 +32,7 @@ bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/master/chrony-o
 
 ## tcping
 
-```
+```bash
 bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/master/tcping.sh) 
 ```
 
