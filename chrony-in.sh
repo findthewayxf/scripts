@@ -4,11 +4,6 @@
 apt-get update && apt-get install chrony bash-completion wget -y
 
 cat << EOF >/etc/chrony/chrony.conf
-#server time.cloudflare.com iburst
-#server time1.google.com iburst
-#server time1.apple.com iburst
-#server ntp-3.arkena.net iburst
-
 server time.cloud.tencent.com iburst
 server time4.cloud.tencent.com iburst
 server time5.cloud.tencent.com iburst
@@ -32,3 +27,6 @@ EOF
 
 systemctl enable chrony
 systemctl restart chrony
+systemctl status chrony
+
+dpkg-reconfigure tzdata

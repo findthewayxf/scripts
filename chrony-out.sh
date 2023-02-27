@@ -26,3 +26,6 @@ EOF
 
 systemctl enable chrony
 systemctl restart chrony
+systemctl status chrony
+
+dpkg-reconfigure tzdata
