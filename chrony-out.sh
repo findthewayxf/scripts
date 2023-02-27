@@ -1,20 +1,14 @@
 #!/usr/bin/env bash
 
 
-apt-get update && apt-get install chrony bash-completion curl wget -y
+apt-get update && apt-get install chrony bash-completion wget -y
 
 cat << EOF >/etc/chrony/chrony.conf
-#server time.cloudflare.com iburst
-#server time1.google.com iburst
-#server time1.apple.com iburst
-#server ntp-3.arkena.net iburst
+server time.cloudflare.com iburst
+server time1.google.com iburst
+server time1.apple.com iburst
+server ntp-3.arkena.net iburst
 
-server time.cloud.tencent.com iburst
-server time4.cloud.tencent.com iburst
-server time5.cloud.tencent.com iburst
-server ntp.aliyun.com iburst
-server ntp6.aliyun.com iburst
-server ntp7.aliyun.com iburst
 
 # 记录系统时钟的漂移
 driftfile /var/lib/chrony/chrony.drift
@@ -31,3 +25,4 @@ leapsectz right/UTC
 EOF
 
 systemctl enable chrony
+systemctl restart chrony

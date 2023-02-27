@@ -23,6 +23,8 @@ bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/master/ckernel.
 ## chrony
 
 ```bash
-bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/master/chrony.sh) 
+bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/master/chrony-in.sh)
+
+bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/master/chrony-out.sh)
 ```
 
