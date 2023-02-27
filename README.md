@@ -28,3 +28,11 @@ bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/master/chrony-i
 bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/master/chrony-out.sh)
 ```
 
+
+
+## tcping
+
+```
+bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/master/tcping.sh) 
+```
+
