@@ -29,4 +29,7 @@ systemctl enable chrony
 systemctl restart chrony
 systemctl status chrony
 
+echo "alias tt='date \"+%Y-%m-%d %H:%M:%S\"'" >> ~/.bashrc
+nano ~/.bashrc
+
 dpkg-reconfigure tzdata
