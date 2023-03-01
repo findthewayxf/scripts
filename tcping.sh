@@ -6,7 +6,7 @@ if [ ! -f "/usr/local/tcping/tcping" ]; then
     wget -P /tmp https://github.com/cloverstd/tcping/releases/download/v0.1.1/tcping-linux-amd64-v0.1.1.tar.gz
 
     # 解压文件到/usr/local/tcping
-    tar -zxvf /tmp/tcping-linux-amd64-v0.1.1.tar.gz /usr/local/tcping
+    tar -zxvf /tmp/tcping-linux-amd64-v0.1.1.tar.gz -C /usr/local/ --strip-components=1
 
     # 删除下载的文件
     rm /tmp/tcping-linux-amd64-v0.1.1.tar.gz
