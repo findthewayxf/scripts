@@ -1,12 +1,16 @@
 #!/usr/bin/env bash
 
 # 检查是否已经下载过文件
-if [ ! -f "tcping-linux-amd64-v0.1.1.tar.gz" ]; then
-    wget https://github.com/cloverstd/tcping/releases/download/v0.1.1/tcping-linux-amd64-v0.1.1.tar.gz
-fi
+if [ ! -f "/usr/local/tcping/tcping" ]; then
+    # 下载文件到/tmp
+    wget -P /tmp https://github.com/cloverstd/tcping/releases/download/v0.1.1/tcping-linux-amd64-v0.1.1.tar.gz
 
-# 解压文件到/usr/local/tcping
-tar -zxvf tcping-linux-amd64-v0.1.1.tar.gz -C /usr/local/tcping
+    # 解压文件到/usr/local/tcping
+    tar -zxvf /tmp/tcping-linux-amd64-v0.1.1.tar.gz -C /usr/local/tcping --strip-components=1
+
+    # 删除下载的文件
+    rm /tmp/tcping-linux-amd64-v0.1.1.tar.gz
+fi
 
 # 检查~/.bashrc是否已经包含export PATH=$PATH:/usr/local/tcping，如果没有则追加
 if ! grep -qxF 'export PATH=$PATH:/usr/local/tcping' ~/.bashrc ; then
@@ -14,7 +18,6 @@ if ! grep -qxF 'export PATH=$PATH:/usr/local/tcping' ~/.bashrc ; then
 fi
 
 # 立即生效
-source ~/.bashrc
+export PATH=$PATH:/usr/local/tcping
 
-# 删除下载的文件
-rm -f tcping-linux-amd64-v0.1.1.tar.gz
+echo "tcping installed successfully!"
