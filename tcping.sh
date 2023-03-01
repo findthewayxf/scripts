@@ -1,12 +1,19 @@
 #!/usr/bin/env bash
 
-set -euo pipefail
+# 下载 tcping-linux-amd64-v0.1.1.tar.gz 文件
+if [ ! -f tcping-linux-amd64-v0.1.1.tar.gz ]; then
+  wget https://github.com/cloverstd/tcping/releases/download/v0.1.1/tcping-linux-amd64-v0.1.1.tar.gz
+fi
 
+# 解压到 /usr/local/tcping 目录下
 mkdir -p /usr/local/tcping
+tar -zxvf tcping-linux-amd64-v0.1.1.tar.gz -C /usr/local/tcping --strip-components=1
 
-wget -q https://github.com/cloverstd/tcping/releases/download/v0.1.1/tcping-linux-amd64-v0.1.1.tar.gz -O /tmp/tcping.tar.gz
-tar -zxf /tmp/tcping.tar.gz -C /usr/local/tcping --strip-components 1
-rm -f /tmp/tcping.tar.gz
+# 将 /usr/local/tcping 加入 PATH 环境变量
+if [ -z "$(grep 'export PATH=\$PATH:/usr/local/tcping' ~/.bashrc)" ]; then
+  echo 'export PATH=$PATH:/usr/local/tcping' >> ~/.bashrc
+  source ~/.bashrc
+fi
 
-echo 'export PATH="$PATH:/usr/local/tcping"' >> ~/.bashrc
-source ~/.bashrc
+# 删除 tcping-linux-amd64-v0.1.1.tar.gz 文件
+rm -f tcping-linux-amd64-v0.1.1.tar.gz
