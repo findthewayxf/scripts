@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+mkdir -p /usr/local/tcping
 # 检查是否已经下载过文件
 if [ ! -f "/usr/local/tcping/tcping" ]; then
     # 下载文件到/tmp
