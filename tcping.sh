@@ -22,7 +22,7 @@ fi
 
 # 检查~/.bashrc是否已经包含export PATH=$PATH:/usr/local/tcping，如果没有则追加
 if ! grep -qxF 'export PATH=$PATH:/usr/local/tcping' ~/.bashrc ; then
-    echo 'export PATH=$PATH:/usr/local/tcping' >> ~/.bashrc
+    echo 'export PATH=$PATH:/usr/local/tcping' >> ~/.bashrc_profile
 fi
 
 # 立即生效
