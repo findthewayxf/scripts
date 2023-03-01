@@ -25,4 +25,6 @@ fi
 # 立即生效
 export PATH=$PATH:/usr/local/tcping
 
+source ~/.bashrc
+
 echo "tcping installed successfully!"
