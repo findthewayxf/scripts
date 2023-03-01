@@ -20,15 +20,13 @@ if [ ! -f "/usr/local/tcping/tcping" ]; then
     rm /tmp/tcping-linux-amd64-v0.1.1.tar.gz
 fi
 
-# 立即生效
-export PATH=$PATH:/usr/local/tcping
-
 # 检查~/.bashrc是否已经包含export PATH=$PATH:/usr/local/tcping，如果没有则追加
 if ! grep -qxF 'export PATH=$PATH:/usr/local/tcping' ~/.bashrc ; then
     echo 'export PATH=$PATH:/usr/local/tcping' >> ~/.bashrc
 fi
 
 # 立即生效
+export PATH=$PATH:/usr/local/tcping
 source ~/.bashrc
 
 echo "tcping installed successfully!"
