@@ -19,9 +19,6 @@ apt-get install -y \
     curl \
     gnupg
 
-# 清除原有 Docker 源
-rm -f /etc/apt/sources.list.d/docker.list
-
 # 添加 Docker 的 GPG 密钥
 mkdir -p /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
@@ -39,5 +36,3 @@ apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
 if ! systemctl status docker > /dev/null 2>&1; then
   echo "Docker 安装成功，但未能正常运行，请检查 Docker 是否配置正确" >&2
 fi
-
-echo "Docker 安装成功"
