@@ -7,7 +7,7 @@ if [ "$(id -u)" -ne 0 ]; then
 fi
 
 # 判断当前系统是否为 Debian 系统
-if ! command -v lsb_release > /dev/null 2>&1 || [[ $(lsb_release -si) != "Debian" ]]; then
+if [ ! -f "/etc/debian_version" ]; then
   echo "此脚本只适用于 Debian 系统" >&2
   exit 1
 fi
@@ -17,8 +17,7 @@ apt-get update
 apt-get install -y \
     ca-certificates \
     curl \
-    gnupg \
-    lsb-release
+    gnupg
 
 # 清除原有 Docker 源
 rm -f /etc/apt/sources.list.d/docker.list
@@ -30,7 +29,7 @@ curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /etc/
 # 添加 Docker 的 APT 源
 echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
-  $(lsb_release -cs) stable" | tee /etc/apt/sources.list.d/docker.list > /dev/null
+  $(cat /etc/debian_version | cut -d '.' -f 1) stable" | tee /etc/apt/sources.list.d/docker.list > /dev/null
 
 # 更新 APT 缓存并安装 Docker
 apt-get update
