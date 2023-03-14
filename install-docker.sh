@@ -17,7 +17,11 @@ apt-get update
 apt-get install -y \
     ca-certificates \
     curl \
-    gnupg
+    gnupg \
+	lsb-release
+
+# 清除原有 Docker 源
+rm -f /etc/apt/sources.list.d/docker.list
 
 # 添加 Docker 的 GPG 密钥
 mkdir -p /etc/apt/keyrings
@@ -25,7 +29,8 @@ curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /etc/
 
 # 添加 Docker 的 APT 源
 echo \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian$(lsb_release -cs) stable" | tee /etc/apt/sources.list.d/docker.list > /dev/null
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
+  $(cat /etc/debian_version | cut -d '.' -f 1) stable" | tee /etc/apt/sources.list.d/docker.list > /dev/null
 
 # 更新 APT 缓存并安装 Docker
 apt-get update
@@ -35,3 +40,5 @@ apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
 if ! systemctl status docker > /dev/null 2>&1; then
   echo "Docker 安装成功，但未能正常运行，请检查 Docker 是否配置正确" >&2
 fi
+
+echo "Docker 安装成功"
