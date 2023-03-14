@@ -40,6 +40,10 @@ bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/master/chrony-o
 bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/master/tcping.sh) 
 ```
 
+```bash
+bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/master/uninstall-tcping.sh) 
+```
+
 
 
 ## docker
