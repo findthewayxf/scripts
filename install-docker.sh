@@ -14,11 +14,11 @@ fi
 
 # 安装必要的依赖
 apt-get update
-apt-get install -y \
+apt-get install \
     ca-certificates \
     curl \
     gnupg \
-	lsb-release
+    lsb-release
 
 # 清除原有 Docker 源
 rm -f /etc/apt/sources.list.d/docker.list
@@ -30,7 +30,7 @@ curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /etc/
 # 添加 Docker 的 APT 源
 echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
-  $(cat /etc/debian_version | cut -d '.' -f 1) stable" | tee /etc/apt/sources.list.d/docker.list > /dev/null
+  $(lsb_release -cs) stable" | tee /etc/apt/sources.list.d/docker.list > /dev/null
 
 # 更新 APT 缓存并安装 Docker
 apt-get update
