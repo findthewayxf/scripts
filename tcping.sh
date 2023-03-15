@@ -31,3 +31,4 @@ export PATH=$PATH:/usr/local/tcping
 echo "tcping installed successfully!"
 
 echo $PATH
+source ~/.bashrc
