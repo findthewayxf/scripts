@@ -27,7 +27,7 @@ EOF
 
 systemctl enable chrony
 systemctl restart chrony
-systemctl status chrony
+#systemctl status chrony
 
 echo "alias tt='date \"+%Y-%m-%d %H:%M:%S\"'" >> ~/.bashrc
 source ~/.bashrc
