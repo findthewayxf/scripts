@@ -3,6 +3,9 @@
 
 apt-get update && apt-get install chrony bash-completion wget -y
 
+timedatectl set-timezone Asia/Shanghai
+
+
 cat << EOF >/etc/chrony/chrony.conf
 server time.cloud.tencent.com iburst
 server time4.cloud.tencent.com iburst
@@ -27,9 +30,7 @@ EOF
 
 systemctl enable chrony
 systemctl restart chrony
-systemctl status chrony
+#systemctl status chrony
 
 echo "alias tt='date \"+%Y-%m-%d %H:%M:%S\"'" >> ~/.bashrc
 source ~/.bashrc
-
-dpkg-reconfigure tzdata
