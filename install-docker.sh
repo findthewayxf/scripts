@@ -14,7 +14,7 @@ fi
 
 # 安装必要的依赖
 apt-get update
-apt-get install \
+apt-get install -y \
     ca-certificates \
     curl \
     gnupg \
