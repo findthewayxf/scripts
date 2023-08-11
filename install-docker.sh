@@ -30,7 +30,7 @@ echo \
 
 # 更新 APT 缓存并安装 Docker
 apt-get update
-apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 
 # 检查 Docker 是否正常运行
 if ! systemctl status docker > /dev/null 2>&1; then
