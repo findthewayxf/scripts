@@ -5,7 +5,7 @@
 ## ssh
 
 ```bash
-bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/master/ssh.sh) -og findthewayxf -p 22122 -d
+bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/main/ssh.sh) -og findthewayxf -p 22122 -d
 ```
 
 
@@ -13,7 +13,7 @@ bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/master/ssh.sh) 
 ## 内核清理
 
 ```bash
-bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/master/ckernel.sh) 
+bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/main/ckernel.sh) 
 ```
 
 
