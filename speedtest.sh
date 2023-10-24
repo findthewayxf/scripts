@@ -23,11 +23,11 @@ fi
 results=()
 
 # 运行第一条命令并将结果添加到数组
-output=$(speedtest -s 54312 --accept-gdpr)
+output=$(speedtest -s 54312 --accept-license)
 results+=("$output")
 
 # 运行第二条命令并将结果添加到数组
-output=$(speedtest -s 59386 --accept-gdpr)
+output=$(speedtest -s 59386 --accept-license)
 results+=("$output")
 
 # 显示所有结果
