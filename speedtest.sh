@@ -1,20 +1,21 @@
 #!/bin/bash
+# https://www.speedtest.net/apps/cli
 
 # 安装 curl
 apt-get update
 apt-get install sudo curl -y
 
-# 检查是否已安装 speedtest-cli
+# 检查是否已安装 speedtest
 if ! command -v speedtest &> /dev/null; then
-    echo "正在安装 speedtest-cli..."
+    echo "正在安装 speedtest"
 	curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.deb.sh | sudo bash
-    apt-get install speedtest-cli -y
+    apt-get install speedtest -y
 fi
 
 
 # 检查 speedtest-cli 是否成功安装
 if ! command -v speedtest &> /dev/null; then
-    echo "speedtest-cli 安装失败，请检查网络连接和软件源设置。"
+    echo "speedtest 安装失败，请检查网络连接和软件源设置。"
     exit 1
 fi
 
