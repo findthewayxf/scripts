@@ -37,3 +37,4 @@ done
 
 exit 0
 
+rm -f speedtest.sh
