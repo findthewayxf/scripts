@@ -37,7 +37,7 @@ bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/main/chrony-out
 ## nginx
 
 ```bash
-bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/main/install-nginx)
+bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/main/install-nginx.sh)
 ```
 
 
