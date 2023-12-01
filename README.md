@@ -5,7 +5,7 @@
 ## ssh
 
 ```bash
-bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/master/ssh.sh) -og findthewayxf -p 22122 -d
+bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/main/ssh.sh) -og findthewayxf -p 22122 -d
 ```
 
 
@@ -13,7 +13,7 @@ bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/master/ssh.sh) 
 ## 内核清理
 
 ```bash
-bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/master/ckernel.sh) 
+bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/main/ckernel.sh) 
 ```
 
 
@@ -23,13 +23,13 @@ bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/master/ckernel.
 ### 国内
 
 ```bash
-bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/master/chrony-in.sh)
+bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/main/chrony-in.sh)
 ```
 
 ### 国外
 
-```
-bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/master/chrony-out.sh)
+```bash
+bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/main/chrony-out.sh)
 ```
 
 
@@ -37,11 +37,11 @@ bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/master/chrony-o
 ## tcping
 
 ```bash
-bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/master/tcping.sh) 
+bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/main/tcping.sh) 
 ```
 
 ```bash
-bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/master/uninstall-tcping.sh) 
+bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/main/uninstall-tcping.sh) 
 ```
 
 
@@ -49,6 +49,14 @@ bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/master/uninstal
 ## docker
 
 ```bash
-bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/master/install-docker.sh) 
+bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/main/install-docker.sh) 
+```
+
+
+
+## speedtest
+
+```bash
+bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/main/speedtest.sh) 
 ```
 
