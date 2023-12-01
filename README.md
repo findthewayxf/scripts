@@ -34,6 +34,14 @@ bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/main/chrony-out
 
 
 
+## nginx
+
+```bash
+bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/main/install-nginx)
+```
+
+
+
 ## tcping
 
 ```bash
