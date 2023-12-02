@@ -62,6 +62,12 @@ bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/main/install-do
 
 
 
+```bash
+bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/main/install-docker-in.sh) 
+```
+
+
+
 ## speedtest
 
 ```bash

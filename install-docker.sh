@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# https://docs.docker.com/engine/install/debian/
+
 # 判断当前用户是否为 root 用户
 if [ "$(id -u)" -ne 0 ]; then
   echo "请使用 root 用户执行此脚本" >&2

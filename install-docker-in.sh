@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# https://u.sb/debian-install-docker/
+
 # 判断当前用户是否为 root 用户
 if [ "$(id -u)" -ne 0 ]; then
   echo "请使用 root 用户执行此脚本" >&2
@@ -19,12 +21,12 @@ apt-get install ca-certificates curl gnupg -y
 
 # 添加 Docker 的 GPG 密钥
 install -m 0755 -d /etc/apt/keyrings
-curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-chmod a+r /etc/apt/keyrings/docker.gpg
+curl -sS https://download.docker.com/linux/debian/gpg | gpg --dearmor > /etc/apt/keyrings/docker-ce.gpg
+chmod a+r /etc/apt/keyrings/docker-ce.gpg
 
 
 # 添加 Docker 的 APT 源
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-ce.gpg] https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/debian $(lsb_release -sc) stable" > /etc/apt/sources.list.d/docker.list
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker-ce.gpg] https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/debian $(lsb_release -sc) stable" > /etc/apt/sources.list.d/docker.list
 
 
 # 更新 APT 缓存并安装 Docker
