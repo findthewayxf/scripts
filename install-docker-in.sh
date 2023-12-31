@@ -15,8 +15,8 @@ if [ ! -f "/etc/debian_version" ]; then
 fi
 
 # 安装必要的依赖
-apt-get update
-apt-get install ca-certificates curl gnupg -y
+apt update
+apt install curl vim wget gnupg dpkg apt-transport-https lsb-release ca-certificates
 
 
 # 添加 Docker 的 GPG 密钥
