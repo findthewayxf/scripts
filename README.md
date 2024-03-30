@@ -74,3 +74,11 @@ bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/main/install-do
 bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/main/speedtest.sh) 
 ```
 
+
+
+## memorycheck
+
+```bash
+bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/main/memoryCheck.sh) 
+```
+
