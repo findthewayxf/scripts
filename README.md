@@ -82,3 +82,7 @@ bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/main/speedtest.
 bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/main/memoryCheck.sh) 
 ```
 
+```shell
+echo "blacklist virtio_balloon" | tee /etc/modprobe.d/blacklist.conf && update-initramfs -u
+```
+
