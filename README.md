@@ -85,6 +85,14 @@ bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/main/speedtest.
 
 
 
+## fail2ban
+
+```bash
+bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/main/fail2ban.sh) 
+```
+
+
+
 ## memorycheck
 
 ```bash
