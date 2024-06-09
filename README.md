@@ -51,6 +51,12 @@ bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/main/install-ng
 
 
 
+```bash
+bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/main/install-nginx-in.sh)
+```
+
+
+
 ## tcping
 
 ```bash
