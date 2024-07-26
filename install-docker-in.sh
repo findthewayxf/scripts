@@ -21,12 +21,12 @@ apt install curl vim wget gnupg dpkg apt-transport-https lsb-release ca-certific
 
 # 添加 Docker 的 GPG 密钥
 install -m 0755 -d /etc/apt/keyrings
-curl -sS https://download.docker.com/linux/debian/gpg | gpg --dearmor > /etc/apt/keyrings/docker-ce.gpg
+curl -sS https://mirrors.ustc.edu.cn/docker-ce/linux/debian/gpg | gpg --dearmor > /etc/apt/keyrings/docker-ce.gpg
 chmod a+r /etc/apt/keyrings/docker-ce.gpg
 
 
 # 添加 Docker 的 APT 源
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker-ce.gpg] https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/debian $(lsb_release -sc) stable" > /etc/apt/sources.list.d/docker.list
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker-ce.gpg] https://mirrors.ustc.edu.cn/docker-ce/linux/debian $(lsb_release -sc) stable" > /etc/apt/sources.list.d/docker.list
 
 
 # 更新 APT 缓存并安装 Docker
