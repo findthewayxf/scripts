@@ -1,7 +1,7 @@
 #!/bin/bash
 
 apt update
-apt install -y unzip wget curl git dnsutils sqlite3 libjemalloc2 apt-transport-https zstd google-perftools
+apt install -y unzip wget curl git dnsutils sqlite3 libjemalloc-dev apt-transport-https zstd google-perftools
 
 mkdir -p "/opt/cache"
 mkdir -p "/var/www/html"
