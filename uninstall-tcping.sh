@@ -5,10 +5,6 @@ if [ -d "/usr/local/tcping" ]; then
     rm -rf /usr/local/tcping
 fi
 
-# 从~/.bashrc中删除export PATH=$PATH:/usr/local/tcping
-sed -i '/export PATH=$PATH:\/usr\/local\/tcping/d' ~/.bashrc
-
-# 立即生效
-source ~/.bashrc
+bash unlink /usr/local/bin/tcping
 
 echo "tcping uninstalled successfully!"
