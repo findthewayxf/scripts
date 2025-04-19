@@ -60,7 +60,7 @@ bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/main/install-ng
 ## tcping
 
 ```bash
-bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/main/tcping.sh) 
+bash <(curl -fsSL xffx.in/tcping)
 ```
 
 ```bash
