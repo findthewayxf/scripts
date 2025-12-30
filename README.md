@@ -45,6 +45,8 @@ bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/main/chrony-out
 
 ## nginx
 
+### debian 12
+
 ```bash
 bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/main/install-nginx.sh)
 ```
@@ -53,6 +55,12 @@ bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/main/install-ng
 
 ```bash
 bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/main/install-nginx-in.sh)
+```
+
+### debian13
+
+```bash
+bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/main/nginx.sh)
 ```
 
 
