@@ -16,10 +16,10 @@ mkdir -p "/var/cache/nginx/scgi_temp"
 mkdir -p "/var/cache/nginx/uwsgi_temp"
 
 cd /tmp
-wget https://raw.xffx.in/raw.githubusercontent.com/jacyl4/de_GWD/main/resource/nginx/nginx_amd64
+wget https://raw.xffx.li/raw.githubusercontent.com/jacyl4/de_GWD/main/resource/nginx/nginx_amd64
 mv -f /tmp/nginx_amd64 /usr/sbin/nginx && chmod +x /usr/sbin/nginx
 
-wget https://raw.xffx.in/raw.githubusercontent.com/jacyl4/de_GWD/main/resource/nginx/nginxConf.zip
+wget https://raw.xffx.li/raw.githubusercontent.com/jacyl4/de_GWD/main/resource/nginx/nginxConf.zip
 mv -f /tmp/nginxConf.zip /opt/cache/nginxConf.zip
 
 unzip /opt/cache/nginxConf.zip -d /etc/nginx >/dev/null
