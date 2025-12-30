@@ -60,7 +60,7 @@ bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/main/install-ng
 ## tcping
 
 ```bash
-bash <(curl -fsSL xffx.in/tcping)
+bash <(curl -fsSL xffx.li/tcping)
 ```
 
 ```bash
@@ -114,6 +114,6 @@ echo "blacklist virtio_balloon" | tee /etc/modprobe.d/blacklist.conf && update-i
 ## pve_change_source
 
 ```shell
-bash <(curl -fsSL raw.xffx.in/raw.githubusercontent.com/findthewayxf/scripts/main/pve_change_source.sh)
+bash <(curl -fsSL raw.xffx.li/raw.githubusercontent.com/findthewayxf/scripts/main/pve_change_source.sh)
 ```
 
