@@ -1,7 +1,9 @@
 #!/bin/bash
 
 apt update
-apt install -y unzip wget curl git dnsutils sqlite3 libjemalloc-dev apt-transport-https zstd google-perftools libmimalloc3
+apt install -y unzip wget curl git dnsutils sqlite3 libjemalloc-dev apt-transport-https zstd google-perftools
+wget http://ftp.us.debian.org/debian/pool/main/m/mimalloc/libmimalloc2.0_2.0.9+ds-2_amd64.deb
+dpkg -i libmimalloc2.0_2.0.9+ds-2_amd64.deb
 
 mkdir -p "/opt/cache"
 mkdir -p "/var/www/html"
