@@ -45,10 +45,12 @@ bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/main/chrony-out
 
 ## nginx
 
-### debian13
-
 ```bash
-bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/main/nginx.sh)
+bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/main/nginx13.sh)
+```
+
+```
+bash <(curl -fsSL raw.githubusercontent.com/findthewayxf/scripts/main/nginx12.sh)
 ```
 
 
